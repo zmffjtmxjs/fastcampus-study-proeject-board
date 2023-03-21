@@ -1,1 +1,1 @@
-# fastcampus-study-proeject-board
+# fastcampus-study-project-board
