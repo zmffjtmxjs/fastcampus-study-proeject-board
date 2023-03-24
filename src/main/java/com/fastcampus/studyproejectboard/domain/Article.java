@@ -23,9 +23,8 @@ import java.util.Set;
         @Index(columnList = "createdAt"),
         @Index(columnList = "createdBy")
 })
-@EntityListeners(AuditingEntityListener.class)
 @Entity
-public class Article {
+public class Article extends AuditingFields{
 
     @OrderBy("id")
     @OneToMany(mappedBy = "article", cascade = CascadeType.ALL)
@@ -42,18 +41,6 @@ public class Article {
     private String content;     // 본문
     @Setter
     private String hashtag;     // 해시태그
-    @CreatedDate
-    @Column(nullable = false)
-    private LocalDateTime createdAt;    // 생성 일자
-    @CreatedBy
-    @Column(nullable = false, length = 100)
-    private String createdBy;           // 생성자
-    @LastModifiedDate
-    @Column(nullable = false)
-    private LocalDateTime modifiedAt;   // 수정 일자
-    @LastModifiedBy
-    @Column(nullable = false, length = 100)
-    private String modifiedBy;          // 수정 일자
 
     protected Article() {
     }
