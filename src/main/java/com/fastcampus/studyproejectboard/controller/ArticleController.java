@@ -3,7 +3,7 @@ package com.fastcampus.studyproejectboard.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@RequestMapping("/articels")
+@RequestMapping("/articles")
 @Controller
 public class ArticleController {
 
