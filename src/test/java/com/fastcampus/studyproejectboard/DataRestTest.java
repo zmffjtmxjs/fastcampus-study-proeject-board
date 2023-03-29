@@ -1,5 +1,6 @@
 package com.fastcampus.studyproejectboard;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,13 +14,14 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+@Disabled("Spring Data REST 통합테스트는 불요함으로 제외")
 @DisplayName("Data REST - API 테스트")
 @Transactional                          // 테스트 중 발생한 DB 관련 실행은 롤백됨
 @AutoConfigureMockMvc
 @SpringBootTest
 public class DataRestTest {
 
-    private MockMvc mvc;
+    private final MockMvc mvc;
 
     public DataRestTest(@Autowired MockMvc mvc) {
         this.mvc = mvc;
