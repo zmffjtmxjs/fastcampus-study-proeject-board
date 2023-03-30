@@ -1,3 +1,8 @@
+-- 테스트 계정
+-- TODO: 더미 어카운트라도 비밀번호 노출은 피해야하므로 빠른 개선 필요
+insert into user_account (user_id, user_password, nickname, email, memo, created_at, created_by, modified_at, modified_by) values
+    ('dummy', 'dummy123', 'DUMMY', 'dummy@mail.com', 'THIS IS DUMMY ACCOUNT FOR TESTING.', now(), 'DUMMY', now(), 'DUMMY');
+
 -- 게시글 100개
 insert into article (title, content, hashtag, created_at, created_by, modified_at, modified_by) values ('Vivamus vel nulla eget eros elementum pellentesque.', 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque. Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.', null, '2022-06-07 10:57:47', 'Carey Mucillo', '2022-12-12 00:40:25', 'Karia Dutnell');
 insert into article (title, content, hashtag, created_at, created_by, modified_at, modified_by) values ('Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.', 'Proin at turpis a pede posuere nonummy. Integer non velit. Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue.', null, '2022-05-01 13:13:42', 'Saxe Lewknor', '2022-01-03 07:13:29', 'Lavinie Focke');
